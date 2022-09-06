@@ -22,13 +22,13 @@
 
 }
 .education__item--title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     margin: 0;
 }
 .education__item--institution {
     color: var(--dark-gray);
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 .education__item--period {
     position: absolute;

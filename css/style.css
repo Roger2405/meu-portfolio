@@ -14,11 +14,24 @@ main {
 main > * {
     padding: 0 1rem;
 }
-
+section > * {
+    max-width: 800px;
+    margin: 0 auto;
+}
 .title {
     color: var(--darkest-gray-text);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     padding-top: 1rem;
     text-transform: uppercase;
+}
+@media screen and (min-width: 481px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    main > * {
+        padding: 0 5rem;
+    }
 }
