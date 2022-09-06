@@ -20,11 +20,13 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/education.css">
     <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
 
 
     <title>Meu Portifólio</title>
 </head>
 <body>
+    
     <header class="header">
         <nav class="navbar navbar-expand-md py-sm-2 pb-sm-0" role="navigation">
             <div>
@@ -86,22 +88,63 @@
         </section>
         <section class="skills">
             <h2 class="title">Habilidades</h2>
-            <div class="skill">
-                <img class="skill__image" src="img/css_logo72.png" alt="">
-                <div class="skill__description">
-                    <h3 class="skill__description--name">CSS3</h3>
-                    <div class="skill__description--exp">
-                        <p>Tempo de exp.:</p>
-                        <span>5 meses</span>
+            <noscript>
+                <span class="text-danger">Ative o JavaScript para mais detalhes</span>
+                <div class="skill">
+                    <div class="skill__description">
+                        <h3 class="skill__description--name">CSS3</h3>
                     </div>
-
                 </div>
-            </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <h3 class="skill__description--name">HTML5</h3>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <h3 class="skill__description--name">JavaScript</h3>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <h3 class="skill__description--name">React</h3>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <h3 class="skill__description--name">C#</h3>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <h3 class="skill__description--name">Unity</h3>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <h3 class="skill__description--name">MySQL</h3>
+                    </div>
+                </div>
+            </noscript>
+        </section>
+        <section class="projects">
+            <h2 class="title">Projetos</h2>
+            <div class="project">
+                <a class="project__link" href="https://play.google.com/store/apps/details?id=com.RDRGames.ItsAMaze2D" target="_blank">
+                </a>
+                
+                    <img class="project__image" src="https://play-lh.googleusercontent.com/rYTMksaz77Oi2JxCg9U5wWOpioMWAMBJbWrROjCTKPHimSKCI7jGMp44dvEADyt-SEw=w526-h296" alt="">
+                    <div class="project__footer">
+                        <img class="project__footer--icon" src="https://play-lh.googleusercontent.com/5Y22DJapiPd5O3F79835Xilj3806qIgvSh6QwF9e54fR1VfnCpgip-3Q7nccqgeCog=s64-rw" alt="">
+                        <h3 class="project__footer--name">It's AMaze 2D</h3>
+                    </div>
+                </div>
         </section>
     </main>
 
     <!--BOOTSTRAP JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
+    <script src="./js/skillGenerator.js" type="module"></script>
+    <script src="./js/projectGenerator.js" type="module"></script>
 </body>
 </html>

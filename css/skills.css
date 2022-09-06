@@ -1,12 +1,16 @@
 
 
 .skills {
+    background-color: var(--light-gray);
+    padding-bottom: 1rem;
 }
 .skill {
-    background-color: var(--blue);
+    background-color: var(--dark-gray);
     border-radius: .5rem;
     padding: .5rem;
+    margin-bottom: .75rem;
     display: flex;
+    height: 5rem;
 }
 .skill__image {
     border-right: 1px solid #fff;
@@ -25,8 +29,4 @@
 .skill__description--exp {
     font-size: 1.25rem;
     font-weight: 300;
-}
-.skill__description--exp * {
-    display: inline;
-    margin: 0;
 }
