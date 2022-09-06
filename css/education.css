@@ -1,0 +1,53 @@
+.education {
+    background-color: var(--gray);
+}
+.education__type {
+    padding: .75rem 0;
+}
+.education__subtitle {
+    color: var(--dark-gray);
+    font-weight: 500;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+.education__item {
+    background-color: var(--light-gray);
+    border-left: .5rem solid var(--blue);
+    color: var(--darkest-gray-text);
+    margin-bottom: .25rem;
+    height: 100px;
+    padding: .5rem;
+    position: relative;
+
+}
+.education__item--title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+.education__item--institution {
+    color: var(--dark-gray);
+    font-size: 1.25rem;
+}
+.education__item--period {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: inherit;
+}
+.education__item--status {
+    bottom: 0;
+    font-size: .7rem;
+    text-transform: uppercase;
+    padding: inherit;
+    position: absolute;
+    right: 0;
+}
+.education__item--status::before {
+    content: '[';
+}
+.education__item--status::after {
+    content: ']';
+}

@@ -1,0 +1,22 @@
+
+.header {
+    background-color: var(--lightest-gray);
+    border: none;
+    height: 5rem;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+}
+
+.navbar-toggler {
+    margin-left: .5rem;
+}
+
+.navbar-toggler-icon {
+    height: 60px;
+    width: 60px;
+}
+.navbar-collapse {
+    background-color: var(--lightest-gray);
+    width: 100vw;
+}

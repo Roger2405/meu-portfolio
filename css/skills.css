@@ -1,0 +1,32 @@
+
+
+.skills {
+}
+.skill {
+    background-color: var(--blue);
+    border-radius: .5rem;
+    padding: .5rem;
+    display: flex;
+}
+.skill__image {
+    border-right: 1px solid #fff;
+
+}
+.skill__description{
+    color: var(--lightest-gray);
+    font-size: 2em;
+    font-weight: 700;
+    margin-left: .5rem;
+}
+.skill__description--name {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.skill__description--exp {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.skill__description--exp * {
+    display: inline;
+    margin: 0;
+}

@@ -1,0 +1,14 @@
+html: #FF5722;
+css: #2299F8;
+js: #F7DF1E;
+unity: #252525;
+linkedin: #007BB5;
+github: #3E75C3;
+csharp: #68217A;
+
+
+darkest-gray-text: #444444;
+dark-gray: #888888;
+gray: #e4e4e4;
+light-gray-bg: #f0f0f0;
+lightest-gray: #f8f8f8;

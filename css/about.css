@@ -1,0 +1,12 @@
+
+.about {
+    margin: 2rem 0;
+}
+.about__text {
+    color: var(--dark-gray);
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    line-height: 1.5rem;
+    margin: 2rem 0;
+    font-weight: 300;
+}

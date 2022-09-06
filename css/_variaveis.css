@@ -1,0 +1,16 @@
+:root {
+    --cor-html: #FF5722;
+    --cor-js: #F7DF1E;
+    --cor-unity: #252525;
+    --cor-linkedin: #007BB5;
+    --cor-github: #3E75C3;
+    --cor-csharp: #68217A;
+    
+    
+    --darkest-gray-text: #444444;
+    --dark-gray: #888888;
+    --gray: #e4e4e4;
+    --blue: #2299F8;
+    --light-gray: #f0f0f0;
+    --lightest-gray: #f8f8f8;
+}
