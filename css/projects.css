@@ -1,63 +1,107 @@
 .projects {
+    transform: skewX(5deg) skewY(-10deg) rotateZ(3deg) rotateX(10deg) rotateY(25deg);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content:flex-start;
     flex-wrap: wrap;
-    gap: .5rem;
-    padding-top: 2rem;
-    height: 800px;
-    width: 100vw;
-    max-width: 800px;
-    margin: 0 auto;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    box-sizing:border-box;
+}
+.project:first-child {
+    
 }
 .project {
     border-radius: .5rem;
     position: relative;
-    min-height: 4rem;
-    width: calc(50% - .25rem);
-    max-width: 300px;
+    width: 100%;
+    aspect-ratio: 2/1;
+    display: flex;
+    flex-direction: column;
 }
 .project__link {
     position: absolute;
-    height: 100%;
+    text-decoration: none;
     width: 100%;
-    left: 0;
     z-index: 5;
+
+    transition: .5s;
 }
 .project__image {
-    border-radius: inherit;
+    aspect-ratio: 2/1;
     position: relative;
     object-fit:cover;
     width: 100%;
-    aspect-ratio: 3/2;
+    bottom: 0;
 }
 
 .project__footer {
     align-items: center;
     bottom: 0;
-    border-radius: inherit;
-    display: flex;
-    height: 4rem;
-    padding: .5rem;
     position: absolute;
+    display: flex;
+    padding: .5rem;
+    background-color: var(--gray);
     width: 100%;
 }
 .project__footer--icon {
-    border-radius: inherit;
+    border-radius: .5rem;
     height: 50px;
 }
 .project__footer--name {
-    color: var(--lightest-gray);
+    color: var(--darkest-gray-text);
     font-size: 1rem;
     margin: 0 0 0 .5rem;
     letter-spacing: 1px;
 }
+
+.projects__noImg {
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    row-gap: .5rem;
+}
+.projects__noImg > div {
+    position: relative;
+    flex-basis: 50%;
+}
+.projects__noImg .project__link {
+    height: calc(100% - .25rem);
+}
+.projects__noImg .project__footer{
+    position: relative;
+    margin: 0;
+    height: 100%;
+}
+
+/*Animations */
+.project__link:hover {
+    transform: scale(1.1) skewX(-7deg) skewY(7deg) rotateZ(-4.9deg) rotateX(-0) rotateY(-5deg);
+    box-shadow: 0 0 1rem #888;
+    z-index: 10;
+
+    transition: .5s;
+}
+
+
 @media screen and (min-width:480px) {
-    .projects {
-        height: 1200px;
+    .project {
+        width: calc(50% - .5rem);
     }
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:992px) {
+    .project {
+        width: calc(100% / 3 - .75rem);
+    }
+}
+@media screen and (min-width:1440px) {
     .projects {
-        height: 1000px;
+        margin: 0 auto;
+    }
+    .project__link {
+        transform: rotateX(10deg) rotateY(10deg) rotateZ(2deg);
+
     }
 }

@@ -5,6 +5,10 @@ var projectsJson = await fetch("../files/projects.json")
 .then((response) => response.status == 200 && (projectsJson = response.json()))
 
 const projectsSection = document.querySelector('.projects'); //elemento pai de todos os projetos
+const divProjectsWithoutImg = document.createElement('div');
+projectsSection.appendChild(divProjectsWithoutImg);
+divProjectsWithoutImg.classList.add('projects__noImg');
+divProjectsWithoutImg.classList.add('project');
 
 //verifica se a variável está preenchida;
 if(projectsJson) {
@@ -24,13 +28,17 @@ function createProject({name, url, iconSrc, screenshots} = typeof projectsJson[0
     
     //criando os elementos HTML e os salvando em constantes para manipulá-los;
     const divProject = document.createElement('div');//elemento pai
-    divProject.classList.add('project');
-
+    
     const link = document.createElement('a');
     link.href = url;
     link.classList.add('project__link');
     link.target = '_blank';
 
+    /*
+            
+            
+            */
+    
     
     const divFooter = document.createElement('div');
     divFooter.classList.add('project__footer');
@@ -46,11 +54,17 @@ function createProject({name, url, iconSrc, screenshots} = typeof projectsJson[0
         imageBg.src = screenshots[0];
         imageBg.alt = "Imagem do projeto " + name;
         imageBg.classList.add('project__image');
-        divProject.appendChild(imageBg);
-        divFooter.style.backgroundColor = '#00000088';
+        link.appendChild(imageBg);
+        link.appendChild(divFooter);
+        //divFooter.style.backgroundColor = '#00000088';
+        projectsSection.appendChild(divProject);
+        divProject.classList.add('project');
     }
     else {
-        divFooter.style.backgroundColor = '#444444';
+        divProjectsWithoutImg.appendChild(divProject);
+        projectsSection.appendChild(divProjectsWithoutImg);
+        //divFooter.style.backgroundColor = '#444444';
+        link.appendChild(divFooter)
     }
     
     divFooter.appendChild(iconElement);
@@ -58,7 +72,5 @@ function createProject({name, url, iconSrc, screenshots} = typeof projectsJson[0
     
     
     divProject.appendChild(link);
-    divProject.appendChild(divFooter);
-
-    projectsSection.appendChild(divProject);
+    
 }

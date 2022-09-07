@@ -2,10 +2,152 @@
 .about {
     margin: 2rem 0;
 }
-.about__text {
+.about__textContent--text {
     color: var(--dark-gray);
     font-size: 1rem;
     letter-spacing: .1rem;
     line-height: 1.5rem;
     font-weight: 300;
+}
+
+
+/*LINKS*/
+.about__links--div {
+    display: flex;
+    height: 4rem;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    width: 80%;
+    z-index: -1;
+}
+.about__links--div, .about__link * {
+    border-radius: 1rem;
+}
+
+/*Backgrounds*/
+.about__links--div {
+    background-color: #222;
+}
+.about__links--div:nth-child(1) .animation-span {
+    background-color: #007BB5;
+}
+.about__links--div:nth-child(2) .animation-span {
+    background-color: #3E75C3;
+}
+
+.about__link {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: aliceblue;
+}
+.about__link--content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin: 0;
+    z-index: 1;
+    font-size: 1.25rem;
+}
+
+
+.animation-span {
+    background-color: red;
+    width: 10%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+}
+.about__link:hover .animation-span{
+    animation-name: spanAnimation;
+    animation-direction:normal;
+    animation-duration: .5s;
+    animation-delay: 0s;
+
+    transition-delay: .5s;
+    width: 100%;
+    height: 100%;
+}
+.about__link:hover {
+    color: #fff;
+
+}
+
+@keyframes spanAnimation {
+    
+    25% {
+        width: 15%;
+        height: 100%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .about__links--div {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .about {
+        display: flex;
+        max-width: none;
+    }
+    .about__textContent {
+        max-width: none;
+        flex-basis: 75%;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .about__links {
+        flex-basis: 25%;
+        margin: 0;
+        transform:skewX(35deg) rotateX(30deg) rotateZ(7deg) rotateY(-25deg);
+        position: relative;
+        transition: all .5s;
+    }
+    .about__links--div {
+        width: 100%;
+        position: absolute;
+        box-shadow: 0 .5rem 1rem rgba(69, 69, 69, 0.502);
+    }
+    .about__links--div:nth-child(1) {
+        z-index: 2;
+    }
+    .about__links--div:nth-child(2) {
+        top: 25%;
+        transform: translateX(-1rem) rotateZ(-1deg);
+        z-index: 1;
+    }
+    
+    .about__links--div, .about__link * {
+        border-radius: 0;
+    }
+    .about__links--div {
+        transition: .5s;
+
+    }
+    .about__links--div:nth-child(1) .animation-span {
+        background-color: #007BB5;
+    }
+    .about__links--div:nth-child(2) .animation-span {
+        background-color: #3E75C3;
+    }
+    
+    
+    .about__links:hover {
+        transform: none;
+        transition: all 1s;
+    }
+    .about__links:hover .about__links--div:nth-child(2) {
+        transform: translateX(0) rotateZ(0) translateY(2.5rem);
+        transition: all 1s;
+        
+    }
 }

@@ -11,6 +11,9 @@
     margin-bottom: .75rem;
     display: flex;
     height: 5rem;
+    box-shadow: .25rem .5rem .25rem #bbbbbb;
+
+    transition: .2s;
 }
 .skill__image {
     border-right: 1px solid #fff;
@@ -29,4 +32,13 @@
 .skill__description--exp {
     font-size: 1rem;
     font-weight: 300;
+}
+.skill:hover {
+
+    transform: translateX(-.25rem) translateY(-.5rem);
+    box-shadow: .5rem 1rem .5rem #bbbbbb, 0 -.5rem .5rem rgb(0, 0, 0, 0.25);
+    transition: .2s;
+    
+}
+.skill__image:hover {
 }

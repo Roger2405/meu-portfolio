@@ -1,6 +1,10 @@
 .education {
     background-color: var(--gray);
 }
+.education__icon {
+    display: none;
+}
+
 .education__type {
     padding: .75rem 0;
 }
@@ -50,4 +54,26 @@
 }
 .education__item--status::after {
     content: ']';
+}
+
+@media screen and (min-width: 1440px) {
+    .education {
+        display: flex;
+        align-items: center;
+        max-width: none;
+    }
+    .education__icon, .education__info {
+        margin: 0;
+        flex-basis: 50%;
+        max-width: none;
+    }
+    .education__icon {
+        display: inline;
+        opacity: 0.1;
+        height: 200px;
+    }
+    .education__item {
+        border: none;
+        border-right: .5rem solid var(--blue);
+    }
 }

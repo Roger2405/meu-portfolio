@@ -10,22 +10,18 @@ body {
 main {
     padding-top: 4rem;
 }
-
 main > * {
     padding: 0 1rem;
 }
-section > * {
-    max-width: 800px;
-    margin: 0 auto;
-}
 .title {
+    width: 100%;
     color: var(--darkest-gray-text);
     font-size: 1.5rem;
     font-weight: 700;
     padding-top: 1rem;
     text-transform: uppercase;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 480px) {
     .title {
         font-size: 2rem;
     }
@@ -33,5 +29,34 @@ section > * {
 @media screen and (min-width: 768px) {
     main > * {
         padding: 0 5rem;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    section {
+        padding: 0 7.5rem;
+    }
+    main {
+        display: grid;
+        width: 100vw;
+        grid-template-columns: 30% 70%;
+    }
+    .about {
+        grid-column: span 2;
+        width: 100vw;
+    }
+    .education {
+        grid-column: span 2;
+        width: 100vw;
+    }
+    .skills {
+        padding-right: 1rem;
+        width: 30vw;
+    }
+    .section-projects {
+        padding-left: 0;
+        margin: 0;
+        width: 70vw;
+
     }
 }

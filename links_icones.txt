@@ -1,0 +1,9 @@
+CSS: https://icon-icons.com/icon/css3-html-logo-social-media/115633
+HTML: https://icon-icons.com/icon/html5-logo-social-media-website/115605
+JS: https://icon-icons.com/icon/javascript/130900
+Unity: https://www.iconfinder.com/icons/617623/unity_unity_3d_logo_3d_icon
+LinkedIn: https://www.iconfinder.com/icons/317725/linkedin_social_icon
+GitHub: https://www.iconfinder.com/icons/4745725/code_development_github_open-source_programming_source_icon
+React: https://www.iconfinder.com/icons/7423888/react_react_native_icon
+MySQL: https://www.iconfinder.com/icons/1012821/code_development_logo_mysql_icon
+
