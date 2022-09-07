@@ -51,7 +51,6 @@ function createProject({name, url, iconSrc, screenshots} = typeof projectsJson[0
             projectsSection.appendChild(divProjectsNoImg);
         }
         if(divProjectsNoImg.childElementCount == 2) {
-            console.log('limpando array');
             divProjectsNoImg = createDivProjectsNoImg();
             
         }
