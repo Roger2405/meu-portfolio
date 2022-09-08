@@ -27,26 +27,32 @@ function createProject({name, url, iconSrc, screenshots} = typeof projectsJson[0
     
     //criando os elementos HTML e os salvando em constantes para manipulá-los;
     const divProject = document.createElement('div');//elemento pai
-    
-    const link = createLink(url);
-    const projectFooter = createFooter();
-    const icon = createIcon(iconSrc);
-    
-    
-    
-    const nameElement = document.createElement('h3');
-    nameElement.textContent = name;
-    nameElement.classList.add('project__footer--name');
+
     if(screenshots) {
-        const imageScreenShots = createImg(screenshots);
-        imageScreenShots.alt = "Imagem do projeto " + name;
-        
-        divProject.classList.add('project');
-        link.appendChild(imageScreenShots);
         projectsSection.appendChild(divProject);
+        divProject.classList.add('project');
+
+        divProject.innerHTML = `
+        <a href="${url}" class="project__link" target="_blank">
+            <img src="${screenshots[0]}" class="project__image" alt="Imagem do projeto ${name}">
+            <div class="project__footer">
+                <img src="${iconSrc}" class="project__footer--icon">
+                <h3 class="project__footer--name">${name}</h3>
+            </div>
+        </a>`;
     }
+    
     else {
         divProjectsNoImg.appendChild(divProject);
+
+        divProject.innerHTML = `
+        <a href="${url}" class="project__link" target="_blank">
+            <div class="project__footer">
+                <img src="${iconSrc}" class="project__footer--icon">
+                <h3 class="project__footer--name">${name}</h3>
+            </div>
+        </a>`;
+        
         if(divProjectsNoImg.childElementCount == 1) {
             projectsSection.appendChild(divProjectsNoImg);
         }
@@ -56,39 +62,4 @@ function createProject({name, url, iconSrc, screenshots} = typeof projectsJson[0
         }
         
     }
-    projectFooter.appendChild(icon);
-    projectFooter.appendChild(nameElement);
-    link.appendChild(projectFooter);
-    
-    
-    divProject.appendChild(link);
-    
-}
-function createLink(url) {
-    const link = document.createElement('a');
-    link.href = url;
-    link.classList.add('project__link');
-    link.target = '_blank';
-    
-    return link;
-}
-function createFooter() {
-    const divFooter = document.createElement('div');
-    divFooter.classList.add('project__footer');
-
-    return divFooter;
-}
-function createIcon(iconSrc) {
-    const iconElement =  document.createElement('img');
-    iconElement.src = iconSrc;
-    iconElement.classList.add('project__footer--icon');
-
-    return iconElement;
-}
-function createImg(images) {
-    const imageBg = document.createElement('img');
-    imageBg.src = images[0];
-    imageBg.classList.add('project__image');
-
-    return imageBg;
 }
