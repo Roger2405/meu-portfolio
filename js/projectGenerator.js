@@ -1,13 +1,13 @@
 
 
 //requisitando o arquivo JSON e armazenando-o na variável projectsJson quando receber a resposta;
-var projectsJson = await fetch("../files/projects.json")
-.then((response) => response.status == 200 && (projectsJson = response.json()))
+export var projectsJson = await fetch("../files/projects.json")
+.then((response) => response.status == 200 && (projectsJson = response.json()));
 
 const projectsSection = document.querySelector('.projects'); //elemento pai de todos os projetos
 var divProjectsNoImg = createDivProjectsNoImg();
 var arrayDivProjectsNoImg = [];
-var imageElements;
+/*var imageElements;
 
 
 setInterval(() => {
@@ -22,19 +22,27 @@ setInterval(() => {
                         currentIndex = project.screenshots.indexOf(img.src);
                         return;
                     }
-                })
-                console.log(project.name + " " + currentIndex);
+                });
                 let newIndex = currentIndex + 1;
                 if(quantScreenShots > 1 && newIndex == quantScreenShots) {
                     newIndex = 0;
                 }
                 if(quantScreenShots > newIndex) {
                     img.src = project.screenshots[newIndex];
+                    img.animate([
+                        { opacity: 0},
+                        { opacity: 1},
+                        { opacity: 1},
+                        { opacity: 0}
+                      ], 
+                      {
+                        duration: 5000
+                      })
                 }
             }
         })
     })
-}, 3000);
+}, 5000);*/
 
 function createDivProjectsNoImg() {
     const div = document.createElement('div');
@@ -49,7 +57,7 @@ if(projectsJson) {
     projectsJson.forEach(projeto => {
         createProject(projeto);
     });
-    imageElements  = document.querySelectorAll('.project__image');
+    //imageElements  = document.querySelectorAll('.project__image');
 
 }
 
