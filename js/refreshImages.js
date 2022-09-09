@@ -22,10 +22,15 @@ setInterval(() => {
                 if(quantScreenShots > newIndex) {
                     img.src = project.screenshots[newIndex];
                     img.animate([
-                        { opacity: 0},
-                        { opacity: 1},
-                        { opacity: 1},
-                        { opacity: 0}
+                        { transform: 'rotateX(90deg)',
+                    opacity: 0},
+                        { transform: 'rotateX(0deg)',
+                    opacity: 1},
+                        {},{},{},{},{},{},{},{},{},{},{},{},
+                        { transform: 'rotateX(0deg)',
+                    opacity: 1},
+                        { transform: 'rotateX(-90deg)',
+                    opacity: 0}
                       ], 
                       {
                         duration: 5000
