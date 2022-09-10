@@ -88,12 +88,12 @@
 
 
 @media screen and (min-width:480px) {
-    .projects {
-        transform: skewX(5deg) skewY(-10deg) rotateZ(3deg) rotateX(10deg) rotateY(25deg);
+    .projects {/*
+        transform: skewX(5deg) skewY(-10deg) rotateZ(3deg) rotateX(10deg) rotateY(25deg);*/
     }
     
-    .project__link {
-        transform: rotateX(10deg) rotateY(10deg) rotateZ(2deg);
+    .project__link {/*
+        transform: rotateX(10deg) rotateY(10deg) rotateZ(2deg);*/
 
     }
     .project {
