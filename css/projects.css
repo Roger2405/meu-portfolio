@@ -1,6 +1,6 @@
 
 .section-projects {
-    padding-left: 1rem;
+    
 }
 .projects {
     box-sizing:border-box;
@@ -126,6 +126,9 @@
 }
 }
 @media screen and (min-width:1440px) {
+    .section-projects {
+        padding-left: 1rem;
+    }
     .projects {
         margin: 0 auto;
     }
