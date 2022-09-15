@@ -9,7 +9,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:flex-start;
-    row-gap: 1rem;
+    row-gap: 1.5rem;
 }
 
 .project {
@@ -21,16 +21,18 @@
     flex-direction: column;
 }
 .project__link {
-    position: absolute;
+    position: relative;
+    height: 100%;
     text-decoration: none;
     width: 100%;
     z-index: 5;
-
     transition: .5s;
 }
 .project__image {
     aspect-ratio: 2/1;
-    position: relative;
+    position: absolute;
+    top: 0;
+
     object-fit:cover;
     
     width: 100%;
@@ -61,12 +63,12 @@
 
 .project__footer {
     align-items: center;
-    bottom: 0;
     position: absolute;
     display: flex;
     padding: .5rem;
     background-color: var(--gray);
     width: 100%;
+    z-index:10;
 }
 .project__footer--icon {
     border-radius: .5rem;
@@ -79,25 +81,22 @@
     letter-spacing: 1px;
 }
 
-.projects__noImg {
-    box-shadow: none;
+.projects__noImg{
     display: flex;
     flex-direction: column;
-    column-gap: .5rem;
     position: relative;
     justify-content: space-between;
-    
 }
-.projects__noImg > div {
-    position: relative;
-    flex-basis: 50%;
-}
+
 .projects__noImg .project__link {
-    height: calc(100% - .25rem);
+    position: relative;
+    flex-basis: 45%;
+    
 }
 .projects__noImg .project__footer{
     position: relative;
     margin: 0;
+    top: 0;
     height: 100%;
 }
 .projects__noImg .project__footer--name{
@@ -109,14 +108,6 @@
 
 
 @media screen and (min-width:480px) {
-    .projects {/*
-        transform: skewX(5deg) skewY(-10deg) rotateZ(3deg) rotateX(10deg) rotateY(25deg);*/
-    }
-    
-    .project__link {/*
-        transform: rotateX(10deg) rotateY(10deg) rotateZ(2deg);*/
-
-    }
     .project {
         width: calc(50% - .5rem);
     }
@@ -127,8 +118,8 @@
     }
     /*Animations */
 .project__link:hover {
-    transform: scale(1.1) skewX(-7deg) skewY(7deg) rotateZ(-4.9deg) rotateX(-0) rotateY(-5deg);
-    box-shadow: 0 0 1rem #888;
+    transform: scale(1.1) translateY(-.5rem) translateX(1rem);
+    box-shadow: -1rem .5rem .75rem #888888aa;
     z-index: 10;
 
     transition: .5s;

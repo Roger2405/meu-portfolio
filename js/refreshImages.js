@@ -15,19 +15,19 @@ setInterval(() => {
             let index = generalIndex % screenshotsCount;
 
             if(screenshotsCount > 1 && project.id == keyImg) {
-                image.src = project.screenshots[index];
-                image.animate([
-                    { opacity: 0},
-                    { opacity: 1},
-                    { opacity: 1},
-                    { opacity: 0}
-                  ], 
-                  {
-                    duration: 5000
-                  })
-                return;
+                var parentElement = document.getElementById(`project${keyImg}`);
+                
+                var newImg = createImg(project.screenshots[index], keyImg)
+                parentElement.append(newImg);
+
+                removeOldImg();
+                console.log(parentElement.childNodes.length)
+                function removeOldImg() {
+                    let imgChild = parentElement.childNodes.item(2);
+                    imgChild.remove();
+                }
             }
         });
     });
     
-}, 5000);
+}, 2000);
