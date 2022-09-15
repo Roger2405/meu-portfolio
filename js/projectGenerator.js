@@ -71,8 +71,8 @@ function createProject({id, name, url, iconSrc, screenshots} = typeof projectsJs
         divProject.classList.add('project');
 
         divProject.innerHTML = `
-        <a href="${url}" class="project__link" target="_blank">
-            <img id=${id} src="${screenshots[0]}" class="project__image" alt="Imagem do projeto ${name}">
+        <a href="${url}" id=${id} class="project__link" target="_blank">
+            <img src="${screenshots[0]}" key=${id} class="project__image" alt="Imagem do projeto ${name}">
             <div class="project__footer">
                 <img src="${iconSrc}" class="project__footer--icon">
                 <h3 class="project__footer--name">${name}</h3>
@@ -84,9 +84,9 @@ function createProject({id, name, url, iconSrc, screenshots} = typeof projectsJs
         divProjectsNoImg.appendChild(divProject);
 
         divProject.innerHTML = `
-        <a href="${url}" class="project__link" target="_blank">
+        <a href="${url}" id=${id} class="project__link" target="_blank">
             <div class="project__footer">
-                <img id=${id} src="${iconSrc}" class="project__footer--icon">
+                <img src="${iconSrc}" class="project__footer--icon">
                 <h3 class="project__footer--name">${name}</h3>
             </div>
         </a>`;

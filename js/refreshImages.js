@@ -1,37 +1,33 @@
+import { createImg } from "./createImg.js";
 import { projectsJson } from "./projectGenerator.js";
 
-var imageElements =document.querySelectorAll('.project__image');
+var imageElements = document.querySelectorAll('.project__image');
+let generalIndex = 0;
 
 setInterval(() => {
-    imageElements.forEach(img => {
+    generalIndex++;
+
+    imageElements.forEach(image => {
+        let keyImg = image.getAttribute('key');
+
         projectsJson.forEach(project => {
-            if(img.getAttribute('id') == project.id) {
-                let currentIndex;
-                let quantScreenShots = project.screenshots.length;
-                project.screenshots.forEach(screenshot => {
-                    
-                    if(img.src == screenshot) {
-                        currentIndex = project.screenshots.indexOf(img.src);
-                        return;
-                    }
-                });
-                let newIndex = currentIndex + 1;
-                if(quantScreenShots > 1 && newIndex == quantScreenShots) {
-                    newIndex = 0;
-                }
-                if(quantScreenShots > newIndex) {
-                    img.src = project.screenshots[newIndex];
-                    img.animate([
-                        { opacity: 0},
-                        { opacity: 1},
-                        { opacity: 1},
-                        { opacity: 0}
-                      ], 
-                      {
-                        duration: 5000
-                      })
-                }
+            let screenshotsCount = project.screenshots?.length;
+            let index = generalIndex % screenshotsCount;
+
+            if(screenshotsCount > 1 && project.id == keyImg) {
+                image.src = project.screenshots[index];
+                image.animate([
+                    { opacity: 0},
+                    { opacity: 1},
+                    { opacity: 1},
+                    { opacity: 0}
+                  ], 
+                  {
+                    duration: 5000
+                  })
+                return;
             }
-        })
-    })
+        });
+    });
+    
 }, 5000);

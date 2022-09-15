@@ -35,11 +35,13 @@ main > * {
 @media screen and (min-width:1440px) {
     section {
         padding: 0 7.5rem;
+
     }
     main {
         display: grid;
         width: 100vw;
         grid-template-columns: 30% 70%;
+
     }
     .about {
         grid-column: span 2;

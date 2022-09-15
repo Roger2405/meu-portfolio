@@ -32,11 +32,32 @@
     aspect-ratio: 2/1;
     position: relative;
     object-fit:cover;
+    
     width: 100%;
     bottom: 0;
     
 
 }
+.fadeOut {
+    animation-name: fadeIn;
+    animation-direction: reverse;
+    animation-duration: 2s;
+}
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale:0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: scale: 1;
+    }
+}
+
 
 .project__footer {
     align-items: center;
