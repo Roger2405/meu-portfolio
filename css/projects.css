@@ -13,33 +13,126 @@
 }
 
 .project {
-    border-radius: .5rem;
     position: relative;
     width: 100%;
     aspect-ratio: 2/1;
     display: flex;
     flex-direction: column;
+    transition: .5s;
+    
 }
 .project__link {
-    position: relative;
     height: 100%;
+    overflow: hidden;
+    position: relative;
     text-decoration: none;
     width: 100%;
     z-index: 5;
+
     transition: .5s;
 }
 .project__image {
     aspect-ratio: 2/1;
-    position: absolute;
-    top: 0;
-
-    object-fit:cover;
-    
-    width: 100%;
+    background-color: #222222;
     bottom: 0;
     
+    object-fit:cover;
+    position: absolute;
+    top: 0;
+    
+    width: 100%;
+
+    transition: .5s;
 
 }
+
+.project__footer {
+    align-items: center;
+    position: absolute;
+    display: flex;
+    padding: .5rem;
+    background-color: #ccc;
+    width: 100%;
+    z-index:10;
+}
+.project__footer--icon {
+    border-radius: .5rem;
+    height: 50px;
+}
+.project__footer--name {
+    color: var(--darkest-gray-text);
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0 0 .5rem;
+    letter-spacing: 1px;
+}
+
+
+
+/*Classes of project's element without images (screenshots)*/ 
+.projects__noImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.projects__noImg .project__link {
+    position: relative;
+    flex-basis: 45%;
+}
+.projects__noImg .project__footer{
+    height: 100%;
+}
+.projects__noImg .project__footer--name{
+    font-size: .75rem;
+}
+
+
+
+
+@media screen and (min-width:480px) {
+    .project {
+        width: calc(50% - .5rem);
+    }
+}
+@media screen and (min-width:992px) {
+    .project {
+        width: calc(100% / 3 - .75rem);
+    }
+    /*Animations that only works in screens with min-width: 992px */
+    .project__link:hover {
+        box-shadow: 0 .5rem .75rem #888888aa;
+        transform: translateY(-.5rem) ;
+        z-index: 10;
+        
+        
+        animation-name: flipCard;
+        animation-delay: 0s;
+        animation-duration: 2s;
+    }
+    .project:nth-child(3n) .project__link:hover{
+        box-shadow: -1rem .5rem .75rem #888888aa;
+        transform: translateX(.5rem) translateY(-.5rem);
+        
+    }
+    .project:nth-child(3n-2) .project__link:hover {
+        box-shadow: 1rem .5rem .75rem #888888aa;
+        transform: translateX(-.5rem) translateY(-.5rem) ;
+    }
+    .project__link:hover .project__image {
+        overflow: hidden;
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+@media screen and (min-width:1440px) {
+    .section-projects {
+        padding-left: 1rem;
+    }
+    .projects {
+        margin: 0 auto;
+    }
+}
+
 .fadeOut {
     animation-name: fadeIn;
     animation-direction: reverse;
@@ -57,79 +150,5 @@
     100% {
         opacity: 1;
         transform: scale: 1;
-    }
-}
-
-
-.project__footer {
-    align-items: center;
-    position: absolute;
-    display: flex;
-    padding: .5rem;
-    background-color: var(--gray);
-    width: 100%;
-    z-index:10;
-}
-.project__footer--icon {
-    border-radius: .5rem;
-    height: 50px;
-}
-.project__footer--name {
-    color: var(--darkest-gray-text);
-    font-size: 1rem;
-    margin: 0 0 0 .5rem;
-    letter-spacing: 1px;
-}
-
-.projects__noImg{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: space-between;
-}
-
-.projects__noImg .project__link {
-    position: relative;
-    flex-basis: 45%;
-    
-}
-.projects__noImg .project__footer{
-    position: relative;
-    margin: 0;
-    top: 0;
-    height: 100%;
-}
-.projects__noImg .project__footer--name{
-    font-size: .75rem;
-    
-}
-
-
-
-
-@media screen and (min-width:480px) {
-    .project {
-        width: calc(50% - .5rem);
-    }
-}
-@media screen and (min-width:992px) {
-    .project {
-        width: calc(100% / 3 - .75rem);
-    }
-    /*Animations */
-.project__link:hover {
-    transform: scale(1.1) translateY(-.5rem) translateX(1rem);
-    box-shadow: -1rem .5rem .75rem #888888aa;
-    z-index: 10;
-
-    transition: .5s;
-}
-}
-@media screen and (min-width:1440px) {
-    .section-projects {
-        padding-left: 1rem;
-    }
-    .projects {
-        margin: 0 auto;
     }
 }
