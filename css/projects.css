@@ -29,7 +29,7 @@
     width: 100%;
     z-index: 5;
 
-    transition: .5s;
+    transition: .25s;
 }
 .project__image {
     aspect-ratio: 2/1;
@@ -42,7 +42,7 @@
     
     width: 100%;
 
-    transition: .5s;
+    transition: .25s;
 
 }
 
@@ -121,7 +121,7 @@
     .project__link:hover .project__image {
         overflow: hidden;
         transform: scale(1.1);
-        transition: 1s;
+        transition: .25s;
     }
 
 @media screen and (min-width:1440px) {
