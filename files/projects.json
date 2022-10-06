@@ -87,6 +87,11 @@
     "name": "Controle de Vendas",
     "url": "https://controle-vendas.vercel.app",
     "iconSrc": "https://controle-vendas.vercel.app/favicon.ico"
-
+  },
+  {
+    "id": 11,
+    "name": "REST Api - Countries",
+    "url": "https://rest-countries-roger2405.vercel.app/",
+    "iconSrc": "https://rest-countries-roger2405.vercel.app/vite.svg"
   }
 ]
