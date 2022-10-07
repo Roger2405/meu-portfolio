@@ -92,12 +92,18 @@
     "id": 11,
     "name": "REST Api - Countries",
     "url": "https://rest-countries-roger2405.vercel.app/",
-    "iconSrc": "https://rest-countries-roger2405.vercel.app/vite.svg"
+    "iconSrc": "https://rest-countries-roger2405.vercel.app/vite.svg",
+    "screenshots": [
+      "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_900,f_auto/Screenshots/k2w59mvfnhqzuuucufnl.jpg"
+    ]
   },
   {
     "id": 12,
     "name": "Room Homepage",
     "url": "https://room-homepage-master-roger2405.vercel.app/",
-    "iconSrc": "https://advice-generator-roger2405.vercel.app/images/favicon-32x32.png"
+    "iconSrc": "https://advice-generator-roger2405.vercel.app/images/favicon-32x32.png",
+    "screenshots": [
+      "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_900,f_auto/Screenshots/g8q7ycilpceonppr0j2b.jpg"
+    ]
   }
 ]
