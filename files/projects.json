@@ -93,5 +93,11 @@
     "name": "REST Api - Countries",
     "url": "https://rest-countries-roger2405.vercel.app/",
     "iconSrc": "https://rest-countries-roger2405.vercel.app/vite.svg"
+  },
+  {
+    "id": 12,
+    "name": "Room Homepage",
+    "url": "https://github.com/Roger2405/room-homepage-master.git",
+    "iconSrc": "https://advice-generator-roger2405.vercel.app/images/favicon-32x32.png"
   }
 ]
