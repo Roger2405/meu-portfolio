@@ -119,7 +119,6 @@
     "id": 14,
     "name": "Tic Tac Toe | React",
     "url": "https://tictactoe-react-roger2405.vercel.app/",
-    "iconSrc": "https://tictactoe-react-roger2405.vercel.app/vite.svg",
-    "screenshots": []
+    "iconSrc": "https://tictactoe-react-roger2405.vercel.app/vite.svg"
   }
 ]
