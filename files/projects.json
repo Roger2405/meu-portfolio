@@ -114,5 +114,12 @@
     "screenshots": [
       "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_900,f_auto/Screenshots/w02t4bmhfiudtpul8lk8.jpg"
     ]
+  },
+  {
+    "id": 14,
+    "name": "Tic Tac Toe | React",
+    "url": "https://tictactoe-react-roger2405.vercel.app/",
+    "iconSrc": "https://tictactoe-react-roger2405.vercel.app/vite.svg",
+    "screenshots": []
   }
 ]
