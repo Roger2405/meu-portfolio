@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     transition: .5s;
+    flex-basis: auto;
     
 }
 .project__link {
@@ -31,6 +32,37 @@
 
     transition: .25s;
 }
+.developing .project__link::after {
+    width: 50%;
+    background-color: rgb(255, 205, 66);
+    height: 2rem;
+    position: absolute;
+    content: 'em desenvolvimento';
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    font-size: auto;
+    text-align: center;
+    top: 50%;
+    right: 0;
+    z-index: 100;
+    transform: rotateZ(-45deg);
+}
+.project.emphasis {
+    order: 0;
+    width: 100%;
+    aspect-ratio: 4/1;
+}
+
+.project.emphasis .project__footer {
+    height: 100%;
+}
+.project.emphasis .project__footer .project__footer--name {
+    font-size: 2rem;
+}
+.project.emphasis .project__footer .project__footer--icon {
+    height: 75%;
+}
+
 .project__image {
     aspect-ratio: 2/1;
     background-color: #222222;
@@ -62,6 +94,7 @@
 .project__footer--name {
     color: var(--darkest-gray-text);
     font-weight: 700;
+    height: fit-content;
     font-size: 1rem;
     margin: 0 0 0 .5rem;
     letter-spacing: 1px;
