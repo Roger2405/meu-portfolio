@@ -133,7 +133,7 @@
     }
     /*Animations that only works in screens with min-width: 992px */
     .project__link:hover {
-        box-shadow: 0 .5rem .75rem #888888aa;
+        box-shadow: 0 .5rem .35rem #888888aa;
         transform: translateY(-.5rem) ;
         z-index: 10;
         
@@ -141,14 +141,15 @@
         animation-name: flipCard;
         animation-delay: 0s;
         animation-duration: 2s;
+    
     }
-    .project:nth-child(3n) .project__link:hover{
-        box-shadow: -1rem .5rem .75rem #888888aa;
+    .project:nth-child(3n+1):not(.emphasis) .project__link:hover{
+        box-shadow: -.5rem .5rem .35rem #888888aa;
         transform: translateX(.5rem) translateY(-.5rem);
         
     }
-    .project:nth-child(3n-2) .project__link:hover {
-        box-shadow: 1rem .5rem .75rem #888888aa;
+    .project:nth-child(3n-1) .project__link:hover {
+        box-shadow: .5rem .5rem .35rem #888888aa;
         transform: translateX(-.5rem) translateY(-.5rem) ;
     }
     .project__link:hover .project__image {
