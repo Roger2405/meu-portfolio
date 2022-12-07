@@ -33,19 +33,18 @@
     transition: .25s;
 }
 .developing .project__link::after {
-    width: 50%;
+    width: auto;
     background-color: rgb(255, 205, 66);
-    height: 2rem;
+    height: 100%;
     position: absolute;
     content: 'em desenvolvimento';
     text-transform: uppercase;
-    letter-spacing: .25rem;
-    font-size: auto;
+    writing-mode: vertical-rl;
+    font-size: 2rem;
     text-align: center;
-    top: 50%;
+    top: 0;
     right: 0;
     z-index: 100;
-    transform: rotateZ(-45deg);
 }
 .project.emphasis {
     order: 0;
